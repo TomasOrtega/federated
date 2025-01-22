@@ -71,3 +71,18 @@ py_test(
     srcs_version = "PY3",
     deps = [":yogi"],
 )
+
+py_library(
+    name="schedule_free",
+    srcs=["schedule_free.py"],
+    srcs_version="PY3",
+)
+
+py_test(
+    name="schedule_free_test",
+    size="medium",
+    srcs=["schedule_free_test.py"],
+    python_version="PY3",
+    srcs_version="PY3",
+    deps=[":schedule_free"],
+)

@@ -24,6 +24,7 @@ import tensorflow as tf
 from utils.optimizers import lars
 from utils.optimizers import shampoo
 from utils.optimizers import yogi
+from utils.optimizers import schedule_free
 
 
 def _optimizer_canonical_name(optimizer_cls):
@@ -39,6 +40,7 @@ _SUPPORTED_OPTIMIZERS_CLS = [
     yogi.Yogi,
     lars.LARS,
     shampoo.Shampoo,
+    schedule_free.ScheduleFree,
 ]
 
 _SUPPORTED_OPTIMIZERS = {
