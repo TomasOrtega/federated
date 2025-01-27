@@ -79,3 +79,9 @@ For a more in-depth discussion, see the following manuscripts
     Learning](https://arxiv.org/abs/2206.09262) for personalization.
 *   [How to DP-fy ML: A Practical Guide to Machine Learning with Differential
     Privacy](https://arxiv.org/abs/2303.00654) for differential privacy.
+
+# Notes
+
+The config that worked for me is bazel-3.4.1, python3.9, and the following requirements:
+pip install tensorflow-federated==0.70.0
+pip install tensorflow[and-cuda]

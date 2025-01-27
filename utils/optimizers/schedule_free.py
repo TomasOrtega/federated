@@ -49,9 +49,8 @@ class ScheduleFree(tf.keras.optimizers.legacy.Optimizer):
 
         # Create a non-trainable variable to track the time step t
         self.t = self.add_weight(
-            name='iter', initializer='zeros', trainable=False, dtype=tf.int32)
+            name='iter', shape=(), initializer='zeros', trainable=False, dtype=tf.int32)
 
-    @tf.function
     def _resource_apply_dense(self, grad, var):
         """Apply gradients to variables.
 
@@ -91,7 +90,6 @@ class ScheduleFree(tf.keras.optimizers.legacy.Optimizer):
 
         return tf.group(*[var_update, x_t_plus_one, z_t_plus_one, y_t_plus_one])
 
-    @tf.function
     def _resource_apply_sparse(self, grad, var, indices):
         """Apply gradients to variables when the gradient is sparse.
 

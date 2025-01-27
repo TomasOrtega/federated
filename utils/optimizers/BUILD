@@ -30,6 +30,7 @@ py_library(
         ":lars",
         ":shampoo",
         ":yogi",
+        ":schedule_free",
     ],
 )
 
